@@ -1,0 +1,110 @@
+/* 
+    Created on : 2019-10-20, 13:42:27
+*/
+.body{background-color: white;
+     border: 1px solid gold;
+     height:900px;
+     width: 550px;
+/*     margin-top: 30px;
+     margin-left: 430px;
+     padding: 10px;*/
+    margin: 0 auto; 
+}
+.body1{text-align: center;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: rgb(128,200,183);
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #666666;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: rgb(0,144,111);
+    border-color: #78C3F3;
+    color: #999999;
+    text-decoration: none;
+}
+.body2{text-align: center;
+}
+.body2 input{width: 480px;
+             height: 45px;
+             background-color: rgb(248,248,248);
+             border: 1px solid rgb(248,248,248);
+             margin: 0 auto;
+}
+.body3{text-align: center;
+}
+.body3 input{width: 480px;
+             height: 45px;
+             background-color: rgb(248,248,248);
+             border: 1px solid rgb(248,248,248);
+             margin: 0 auto;
+}
+.body4{text-align: center;
+      width: 480px;
+      height: 45px;
+      background-color: rgb(248,248,248);
+      border-color: rgb(248,248,248);
+      margin: 0 auto;
+}
+.body41 li{float: left;
+          list-style: none;
+          margin-top: 3px;
+          color: #666666;
+          font-size: 13px;
+          left: 2px;
+}
+.body41{left: 2px;
+}
+.body42{float: right;}
+.body5{text-align: center;
+}
+.body5 input{width: 480px;
+             height: 45px;
+             background-color: rgb(248,248,248);
+             border: 1px solid rgb(248,248,248);
+             margin: 0 auto;
+}
+.body6{text-align: center;
+}
+.body6 input{width: 480px;
+             height: 45px;
+             background-color: rgb(248,248,248);
+             border: 1px solid rgb(248,248,248);
+             margin: 0 auto;
+}
+.body7{text-align: center;
+}
+.body7 input{width: 480px;
+             height: 45px;
+             background-color: rgb(248,248,248);
+             margin: 0 auto;
+             border: 1px solid rgb(248,248,248);
+}
+.body8{text-align: center;
+}
+.body8_input{color: white;
+             background-color: rgb(0,179,138);
+             width: 480px;
+             height: 45px;
+             margin: 0 auto;
+             border: 1px solid rgb(248,248,248);
+}
+.body9{text-align: center;}
+.body9 p{color: rgb(0,179,138);}
+
+
