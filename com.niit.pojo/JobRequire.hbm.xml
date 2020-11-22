@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-9 19:30:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.niit.pojo.JobRequire" table="JobRequire" schema="dbo" catalog="ApplicationPlatform" optimistic-lock="version">
+        <id name="jid" type="int">
+            <column name="Jid" />
+            <generator class="identity" />
+        </id>
+        <property name="jname" type="string">
+            <column name="Jname" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="rname" type="string">
+            <column name="Rname" length="30" not-null="true" />
+        </property>
+        <property name="jtype" type="string">
+            <column name="Jtype" length="20" />
+        </property>
+        <property name="jdescriptiont" type="string">
+            <column name="Jdescriptiont" length="200" not-null="true" />
+        </property>
+        <property name="jnumber" type="int">
+            <column name="Jnumber" not-null="true" />
+        </property>
+        <property name="jedu" type="string">
+            <column name="Jedu" length="20" not-null="true" />
+        </property>
+        <property name="jexperience" type="string">
+            <column name="Jexperience" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
