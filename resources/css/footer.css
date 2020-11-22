@@ -1,0 +1,108 @@
+
+/* 
+    Created on : 2020-10-19, 20:45:25
+    Author     : qm
+*/
+
+#footer .copyright .copyright_main {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 28px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer .copyright .copyright_main .copyright_main_left {
+    display: flex;
+    align-items: center;
+}
+
+#footer .copyright .copyright_main .copyright_main_left .copyright_title {
+    margin-right: 5px;
+}
+
+* {
+    outline: 0;
+}
+
+a {
+    color: #555;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#footer .copyright {
+    clear: both;
+    margin: 0 auto;
+    color: #999;
+    font-size: 14px;
+    line-height: 12px;
+    text-align: center;
+    background: #FAFAFA;
+    height: 100px;
+    overflow: hidden;
+}
+
+#footer .copyright .copyright_main .footer_gongan {
+    margin: 0 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#footer .copyright a {
+    padding-right: 0;
+    font-size: 14px;
+    color: #999;
+}
+
+#footer .copyright .copyright_main .copyright_main_left .footer_lagou_jubao {
+    margin: 0 0 0 20px;
+    border: 1px solid #D5DADF;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+#footer .copyright .copyright_main .copyright_main_left .footer_lagou_jubao .lagou_jubao {
+    display: inline-block;
+    width: 20px;
+    height: 24px;
+    background: url(//www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png) -132px -20px no-repeat;
+    margin: 0 10px 0 0;
+}
+
+#footer .copyright .copyright_main .copyright_main_left .footer_lagou_jubao p {
+    text-align: left;
+}
+
+p {
+    margin: 0;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#footer .copyright .copyright_main .copyright_main_left .footer_lagou_jubao span, #footer .copyright .copyright_main .copyright_main_left .footer_lagou_jubao strong {
+    display: block;
+    line-height: 14px;
+    font-size: 12px;
+    color: #999;
+}
+
+#footer .footer_lagou_icon {
+    display: inline-block;
+    width: 198px;
+    height: 19px;
+    background: url(//www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/footer_lagou_icon_75f0ebc.png) 0 0 no-repeat;
+}
+
+em, i {
+    font-style: normal;
+}
+
