@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--qm Generated 2020-11-15 19:30:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.niit.pojo.Recruiter" table="Recruiter" schema="dbo" catalog="ApplicationPlatform" optimistic-lock="version">
+        <id name="rname" type="string">
+            <column name="Rname" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="rpic" type="string">
+            <column name="Rpic" length="100" />
+        </property>
+        <property name="rtel" type="string">
+            <column name="Rtel" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="remail" type="string">
+            <column name="Remail" length="30" not-null="true" unique="true" />
+        </property>
+        <property name="rbirth" type="date">
+            <column name="Rbirth" length="10" not-null="true" />
+        </property>
+        <property name="rgender" type="string">
+            <column name="Rgender" length="2" not-null="true" />
+        </property>
+        <property name="fname" type="string">
+            <column name="Fname" length="20" not-null="true" />
+        </property>
+        <property name="rposition" type="string">
+            <column name="Rposition" length="20" not-null="true" />
+        </property>
+        <property name="rpwd" type="string">
+            <column name="Rpwd" length="20" not-null="true" />
+        </property>
+        <property name="rstatus" type="string">
+            <column name="Rstatus" length="10" />
+        </property>
+        <property name="rreason" type="string">
+            <column name="Rreason" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
