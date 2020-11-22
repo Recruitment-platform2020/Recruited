@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2020-11-9 19:30:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.niit.pojo.Resume" table="Resume" schema="dbo" catalog="ApplicationPlatform" optimistic-lock="version">
+        <id name="rid" type="int">
+            <column name="rid" />
+            <generator class="identity" />
+        </id>
+        <property name="uname" type="string">
+            <column name="Uname" length="30" not-null="true" />
+        </property>
+        <property name="ppic" type="string">
+            <column name="ppic" length="100" not-null="true" />
+        </property>
+        <property name="pname" type="string">
+            <column name="pname" length="20" not-null="true" />
+        </property>
+        <property name="pgender" type="string">
+            <column name="pgender" length="2" not-null="true" />
+        </property>
+        <property name="pbirth" type="date">
+            <column name="pbirth" length="10" not-null="true" />
+        </property>
+        <property name="pemail" type="string">
+            <column name="pemail" length="20" not-null="true" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="30" not-null="true" />
+        </property>
+        <property name="nation" type="string">
+            <column name="nation" length="20" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="30" not-null="true" />
+        </property>
+        <property name="marriage" type="string">
+            <column name="marriage" length="6" not-null="true" />
+        </property>
+        <property name="education" type="string">
+            <column name="education" length="20" not-null="true" />
+        </property>
+        <property name="school" type="string">
+            <column name="school" length="20" not-null="true" />
+        </property>
+        <property name="gtime" type="date">
+            <column name="gtime" length="10" not-null="true" />
+        </property>
+        <property name="majora" type="string">
+            <column name="majora" length="30" not-null="true" />
+        </property>
+        <property name="majorb" type="string">
+            <column name="majorb" length="30" />
+        </property>
+        <property name="honor" type="string">
+            <column name="honor" length="100" />
+        </property>
+        <property name="course" type="string">
+            <column name="course" length="200" />
+        </property>
+        <property name="workyear" type="int">
+            <column name="workyear" not-null="true" />
+        </property>
+        <property name="workdetail" type="string">
+            <column name="workdetail" length="200" />
+        </property>
+        <property name="advantage" type="string">
+            <column name="advantage" length="200" />
+        </property>
+        <property name="skillcertificates" type="string">
+            <column name="skillcertificates" length="200" />
+        </property>
+        <property name="salary" type="string">
+            <column name="salary" length="20" not-null="true" />
+        </property>
+        <property name="jobinten" type="string">
+            <column name="jobinten" length="50" not-null="true" />
+        </property>
+        <property name="other" type="string">
+            <column name="other" length="400" />
+        </property>
+        <property name="jid" type="int">
+            <column name="Jid" not-null="true" />
+        </property>
+        <property name="atime" type="date">
+            <column name="Atime" length="10" />
+        </property>
+        <property name="areason" type="string">
+            <column name="Areason" length="50" />
+        </property>
+        <property name="astatus" type="string">
+            <column name="Astatus" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>
