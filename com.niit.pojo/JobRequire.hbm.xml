@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2019-12-9 19:30:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2020-11-3 19:30:42 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.niit.pojo.JobRequire" table="JobRequire" schema="dbo" catalog="ApplicationPlatform" optimistic-lock="version">
         <id name="jid" type="int">
