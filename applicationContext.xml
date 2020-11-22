@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+">
+
+    <context:component-scan base-package="com.niit.dao.impl,com.niit.service.impl"/>
+    <!--通过<context:property-placeholder/>标记加载一个属性文件-->
+    <context:property-placeholder location="classpath:properties/jdbc.properties"/>
+    <!--Spring和和ibernate集成的话，尽量将数据源配置到Spring的配置文件中-->
+     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+         <property name="driverClassName" value="${jdbc.driverClass}"/>
+         <property name="url" value="${jdbc.url}"/>
+         <property name="username" value="${jdbc.username}"/>
+         <property name="password" value="${jdbc.password}"/>
+         
+     </bean>
+     
+      <bean id="springSessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!--读取Hibernate核心配置文件-->
+        <!--<property name="configLocations" value="classpath:com/qdu/config/hibernate.cfg.xml"></property>-->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingLocations">
+            <list>
+                <!--<value>classpath:com/qdu/pojo/Student.hbm.xml</value>-->
+                <value>classpath:com/niit/pojo/*.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.fomat_sql">true</prop>
+            </props>
+            
+        </property>
+    </bean>
+    <!--将Hibernate框架的核心配置文件注册成为Spring的bean之后，Spring就去管理Hibernate,那么就不需要Hibernate中的HibernateUtil了-->
+    <!--认识Spring事务的功能和属性
+        Spring事务的属性：原子性、一致性、隔离性和持久性
+        实现Spring事务必须具有的属性是：
+        1、传播行为：指定事务的界限（事务开始和结束的地方）
+        2、隔离级别：定义事务受其他并发事务的活动影响的程度
+        3、只读：不修改任何数据的事务；
+        4、事务超时：指定事务在回滚之前可以运行的时间段；
+        5、回滚规则：指定那些异常可以导致事务的回滚；
+    -->
+    <!--创建和实现事务有两种方式：1、配置Spring事务；2、使用注解实现Spring事务；-->
+    <!--实现Spring事务：配置Spring事务-->
+    <!--1、定义事务管理器
+    所有事务管理器都实现了PlatformTransactionManager接口
+    -->
+    <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="springSessionFactory"/>
+    </bean>
+    <!--2、定义事务通知：配置事务策略，也就是说配置事务的属性-->
+    <!--使用Spring框架中的AOP的思想将事务切入到使用事务的类和方法中-->
+<!--    <tx:advice id="txAdvice" transaction-manager="txManager">创建调用事务管理的通知
+       <tx:attributes>  配置事务的属性：用于描述事务的行为
+           事务可以在dao层使用，也可以在service层使用，当Hibernate完全交给Spring去管理的话，那么建议在service使用事务
+           <tx:method name="get*" propagation="REQUIRED" read-only="true" timeout="10"  />
+           <tx:method name="add*" propagation="REQUIRED"/>
+           <tx:method name="update*" propagation="REQUIRED"/>
+           <tx:method name="delete*" propagation="REQUIRED"/>
+           <tx:method name="validate*" propagation="REQUIRED" read-only="true"/>
+       </tx:attributes> 
+    </tx:advice>
+    3、配置切入点和通知器
+   <aop:config>
+       1、定义切入点
+       <aop:pointcut id="pt" expression="execution(* com.qdu.service.*.*(..))"/>
+       2、定义通知器
+       <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"/>
+   </aop:config>-->
+   <!--使用注解实现:指定事务实现需要依赖的事务管理器-->
+   <tx:annotation-driven transaction-manager="txManager"/>
+
+</beans>
