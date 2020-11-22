@@ -1,0 +1,249 @@
+/* 
+    Created on : 2020-10-20, 18:02:38
+    Author     : qm
+*/
+.head{/*border: 1px solid blue;*/
+     position: absolute;
+     margin-top:0px ;
+     height: 60px;
+     width: 100%;
+     margin: 0px auto;
+}
+.head_left{width:238px ;
+            height: 48px;
+            margin-left: 285px;
+            margin-top: 15px;
+            /*border: 1px solid red;*/
+}
+.login_head{width:228px ;
+            height: 38px;
+}
+.head_right a{text-decoration: none;}
+.head_right a:link {color: #666666} /* 未被访问的链接  */
+.head_right a:visited {color: #666666} /* 已被访问过的链接  */
+/*.head_right a:hover {color: blue}  鼠标悬浮在上的链接  */
+.head_right a:active {color: #666666} /* 鼠标点中激活链接  */
+table{
+	position: absolute;
+	border-collapse: collapse;
+	right: 400px;
+	top: 1px;
+        border-right: 1px solid green;
+}td{width:100px;padding:6px;}
+tr{border-right: 1px solid green;
+    position: absolute;
+    margin: 0px auto;
+    width: 500px;
+    height: 38px;
+    margin-top: 18px;
+    display: inline-block;
+    float: left;
+    display:block;
+    color: #666666;
+    font-family: 黑体;
+    font-size: 16px;
+}
+.body{background-color: rgb(0,179,138);
+     border: 1px solid pink;
+     position: absolute;
+     margin-top:60px ;
+     height:680px;
+     width: 100%;
+     /*margin: 0px auto;*/
+}
+.body1{/*border: 1px solid blue;*/
+     position: absolute;
+     margin-top:555px ;
+     height: 140px;
+     width: 100%;
+}
+.body_bg{position: absolute;
+    top: 0px;     
+    width: 100%;
+}
+.body_left_top{width:290px ;
+            height: 50px;
+            margin-left: 285px;
+            margin-top: 28px;
+            /*border: 1px solid red;*/
+}
+.login_body_left_top{position: absolute;
+     top: 30px;
+     height:38px;
+     width: 270px;
+}
+.body_left_top1{
+        width: 630px;
+        margin: 30px auto;
+        font-family: 黑体;
+        font-size: 18px;
+        margin-left: 285px;
+        margin-top: 4px;
+        /*border: 1px solid red;*/
+    }
+input{
+        width: 500px;
+        border: 1px solid #e2e2e2;
+        height: 45px;
+        float: left;
+        background-image: url(images/search.jpg);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position:5px center;
+        padding:0 0 0 25px;
+        border-radius:8px;
+    }
+#search{width: 82px;
+        height: 45px;
+        /*float: right;*/
+        background: #666666;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        border-radius:8px;
+        position: absolute;
+        margin-left: 545px;
+    }
+/*.body_left_mid1{width: 150px;
+        height:350px;
+        margin: 30px auto;
+        font-family: 黑体;
+        font-size: 18px;
+        margin-left: 321px;
+        margin-top: 30px;
+        border: 1px solid red;
+        position: absolute;
+    }*/
+    
+/*.body_left_mid1{margin-left: 321px;
+        margin-top: 30px;
+        margin: 20px auto;
+        width: 403px;
+        height: 600px;
+        border:1px solid red;
+        position: absolute;
+        }*/
+
+#content {
+	margin-left: 285px;
+	margin-top: 30px;
+	margin: 20px auto;
+	width: 1090px;
+	height: 600px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	left: 304px;
+	top: 38px;
+	border-radius: 5px;
+      }
+#tab_bar {
+	position: absolute;
+	margin-left: 285px;
+	margin-top: 30px;
+	margin: 20px auto;
+	width: 120px;
+	height: 438px;
+	left: -20px;
+	top: 68px;
+	background-color: rgb(0,144,111);/*灰色*/
+	border-radius: 5px;
+      }
+#tab_bar ul {
+        padding: 0px;
+        margin: 0px;
+        height: 20px;
+        color: white;
+        left: 5px;
+        border-radius:5px;
+      }
+#tab_bar li {
+        list-style-type: none;
+        float: left;
+        width: 110px;
+        height: 65px;
+        background-color: rgb(0,144,111);
+        border-radius:5px;
+        margin-bottom: 5px;
+        margin: 4px;
+        text-align: center;
+        line-height: 65px;
+        left: 5px;
+      }
+.tab_css {
+	position: absolute;
+	margin-left: 450px;
+	margin-top: 30px;
+	margin: 20px auto;
+	width: 503px;
+	height: 439px;
+	background-color: rgb(0,179,138);/*橙色*/
+	display: none;
+	left: 114px;
+	top: 68px;
+	border-radius: 5px;
+      }
+.img{filter:alpha(Opacity=60);
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    padding: 3px; 
+    border-radius: 5px;
+    }
+.img:hover{ilter:alpha(Opacity=100);
+           -moz-opacity:1.0;
+           opacity: 1.0;
+           border-radius: 5px;
+    }
+.body_right{
+	width: 438px;
+	height: 500px;
+	margin: 30px auto;
+	margin-left: 810px;
+	/*border: 1px solid red;*/
+	top: 50px;
+	position: absolute;
+	left: 132px;
+        border-radius:5px;
+      }
+.body_right_ul{ position: absolute; width: 300px; margin: 5px auto;left:0px ;top:20 px;font-size: 16px;}
+.body_right_li{ list-style: none;border-radius:5px;width: 350px;}
+.body_right_input{ display: none;}
+.body_right_label{float:left; width: 170px;text-align: center;line-height: 30px;
+                  box-sizing: border-box; cursor: pointer; 
+                  border-bottom: 3px solid white;
+                  background-color: white;
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 5px;
+}
+.body_right_input:checked+.body_right_label{ color:#000; border-bottom: 8px solid green;font-size: 18px;}
+.body_right_li:last-child body_right_label{ border-right: 1px solid pink;}
+.contentt{opacity: 0; visibility:hidden; position: absolute; left: 40px; 
+         top: 31px; width: 340px; height: 445px; box-sizing: border-box; font-size: 18px; 
+         color: #000; 
+         border-radius: 5px;
+}
+.body_right_li:nth-child(1) .contentt{ background-color: white;padding: 25px;}
+.body_right_li:nth-child(2) .contentt{ background-color: white;padding: 25px;}
+.body_right_input:checked~.contentt{ opacity: 1; visibility:visible;}
+.content_input{width: 220px;
+               height: 40px;
+               line-height: 30px;
+               border: 1px solid rgb(0,179,138);
+               margin-left: 30px;
+}
+.content_button{background-color: rgb(0,179,138);
+                width: 260px;
+                height: 50px;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+}
+.content_table{display:block;
+              margin:15px;
+}
+.content_tr_td{margin-top: 240px;
+              position: absolute;
+              text-align: center;
+              margin-left: 110px;
+}
