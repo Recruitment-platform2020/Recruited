@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN">
+
+-<hibernate-mapping>
+
+
+-<class optimistic-lock="version" catalog="ApplicationPlatform" schema="dbo" table="Factory" name="com.niit.pojo.Factory">
+
+
+-<id name="fname" type="string">
+
+<column name="Fname" length="20"/>
+
+<generator class="assigned"/>
+
+</id>
+
+
+-<property name="fenglish" type="string">
+
+<column name="Fenglish" length="20" not-null="true"/>
+
+</property>
+
+
+-<property name="fintroduction" type="string">
+
+<column name="Fintroduction" length="300" not-null="true"/>
+
+</property>
+
+
+-<property name="fscale" type="string">
+
+<column name="Fscale" length="20" not-null="true"/>
+
+</property>
+
+
+-<property name="ftrade" type="string">
+
+<column name="Ftrade" length="20" not-null="true"/>
+
+</property>
+
+
+-<property name="ftype" type="string">
+
+<column name="Ftype" length="20" not-null="true"/>
+
+</property>
+
+</class>
+
+</hibernate-mapping>
